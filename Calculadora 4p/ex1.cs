@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -348,16 +348,7 @@ namespace Calculadora
                                 {
                                     Console.WriteLine("Resultado " + valor + " encontrado no índice " + indiceEncontrado + ".");
 
-                                    var ocorrencias = ListaResultado
-                                        .Select((valorAtual, idx) => new { valorAtual, idx })
-                                        .Where(x => x.valorAtual == valor)
-                                        .Select(x => x.idx)
-                                        .ToList();
-
-                                    if (ocorrencias.Count > 1)
-                                    {
-                                        Console.WriteLine("Também aparece nos índices: " + string.Join(", ", ocorrencias));
-                                    }
+    
                                 }
                             }
                             else
